@@ -8,7 +8,7 @@ public class BankAccount {
 	private double balance;
 
 	public static final String BANK_NAME = "HDFC"; // static are only one copy will be their
-	private static long totalAccounts;
+	public static long totalAccounts;
 
 	public BankAccount() {
 		totalAccounts++;
@@ -20,6 +20,7 @@ public class BankAccount {
 		this.accType = accType;
 		this.balance = balance;
 		totalAccounts++;
+		System.out.println(totalAccounts);
 	}
 
 	public double withdraw(double amount) {
