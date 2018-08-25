@@ -27,7 +27,6 @@ class TelevisionTest {
 		assertEquals(51, television.increaseVolume());
 		assertEquals(52, television.increaseVolume());
 		assertEquals(53, television.increaseVolume());
-		
 	}
 
 	@Test
@@ -44,7 +43,6 @@ class TelevisionTest {
 		assertEquals(256, television.changeChannel(256));
 		assertEquals(530, television.changeChannel(530));
 		assertEquals(630, television.changeChannel(630));
-		
 	}
 
 	@Test
