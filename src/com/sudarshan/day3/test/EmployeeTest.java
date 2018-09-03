@@ -14,7 +14,7 @@ class EmployeeTest {
 	
 	@BeforeEach
 	void setUp() {
-		employee = new Employee(12345, "Sudarshan", 9000,500);
+		employee = new Employee(12345, "Sudarshan", 9000);
 	}
 
 	@AfterEach

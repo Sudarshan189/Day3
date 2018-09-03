@@ -7,25 +7,24 @@ public class Employee {
 	private String employeeName;
 	private double basicSalary;
 	private double netSalary;
-	private double medical;
+	private static final double MEDICAL = 500;
 	private double hra;
 	private double pf;
 	private double grossSalary;
-	
+
 	public Employee() {
 	}
 
-	public Employee(long employeeId, String employeeName, double basicSalary, double medical) {
+	public Employee(long employeeId, String employeeName, double basicSalary) {
 		this.employeeId = employeeId;
 		this.employeeName = employeeName;
 		this.basicSalary = basicSalary;
-		this.medical = medical;
 	}
 
 	public double calculateNetSalary() {
 		hra = 0.5 * basicSalary;
 		pf = 0.12 * basicSalary;
-		grossSalary = hra + basicSalary + medical;
+		grossSalary = hra + basicSalary + MEDICAL;
 
 		netSalary = grossSalary - pf - PRIVATE_TAX;
 		displayEmployeeInformation();
